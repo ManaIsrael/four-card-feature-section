@@ -1,0 +1,135 @@
+:root {
+--primary-red: hsl(0, 78%, 62%);
+--primary-cyan: hsl(180, 62%, 55%);
+--primary-orange: hsl(34, 97%, 64%);
+--primary-blue: hsl(212, 86%, 64%);
+
+--neutral-verydarkblue: hsl(234, 12%, 34%);
+--neutral-grayishblue: hsl(229, 6%, 66%);
+--neutral-verylightgray: hsl(0, 0%, 98%);
+
+--fs-body: 15px;
+--ff-poppins: 'Poppins';
+--fw-light: 200;
+--fw-normal: 400;
+--fw-bold: 600;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+body {
+font-size: var(--fs-body);
+font-family: var(--ff-poppins), sans-serif;
+font-weight: var(--fw-normal);
+
+background-color: var(--neutral-verylightgray);
+}
+
+p, h1 {
+color: var(--neutral-grayishblue);
+}
+span, h2 {
+color: var(--neutral-verydarkblue);
+}
+
+header {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+
+margin-top: 3em;
+}
+.texts {
+width: 40%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+h1 {
+font-weight: var(--fw-light);
+
+}
+header span {
+font-weight: var(--fw-bold);
+font-size: 1.8rem;
+}
+header p {
+margin-top: 1em;
+}
+
+main {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+margin-top: 3em;
+margin-bottom: 3em;
+}
+.holder {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+width: 60%;
+}
+.card {
+padding: 1em;
+width: 15em;
+box-shadow: 0px 2px 2px var(--neutral-grayishblue);
+border-top: 3px solid;
+border-radius: 5px;
+background-color: white;
+
+display: flex;
+flex-direction: column;
+}
+.card img {
+width: 50px;
+align-self: flex-end;
+}
+h2 {
+font-size: 1rem;
+margin-bottom: .5em;
+}
+.card p {
+font-size: .7rem;
+line-height: 1rem;
+}
+
+.first-card .card {
+border-color: var(--primary-cyan);
+}
+.second-cards .card {
+border-color: var(--primary-orange);
+}
+.second-cards .second-1 {
+margin-bottom: 1em;
+border-color: var(--primary-red);
+}
+.third-card .card {
+border-color: var(--primary-blue);
+}
+
+@media(max-width: 500px) {
+
+.holder {
+flex-direction: column;
+width: 100%;
+}
+
+.texts {
+width: 90%;
+align-items: flex-start;
+box-sizing: border-box;
+}
+.card {
+width: 25em;
+margin-bottom: 1em;
+}
+
+}
